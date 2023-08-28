@@ -1,0 +1,79 @@
+<resources>
+    <integer name="quantidade">4</integer>
+
+    <string name="titulo1">Inspetor</string>
+    <string name="enum1">O Inspetor de Ensino vai visitar sete escolas, E, F, G, H, I, J e K. As seguintes condições devem ser obedecidas quanto à ordem em que as escolas serão visitadas:
+    \n\n
+    • O Inspetor visita E antes de F. \n
+    • O Inspetor visita F antes de I. \n
+    • O Inspetor visita I depois de G.\n
+    • O Inspetor visita H depois de G.\n
+    • O Inspetor visita J depois de I.\n
+    • O Inspetor não visita K imediatamente antes ou imediatamente depois de visitar F. \n
+    • O Inspetor não visita K imediatamente antes ou imediatamente depois de visitar I. \n
+    \n
+    Questão 1. Qual das seguintes alternativas poderia ser a ordem em que o Inspetor visita as escolas?</string>
+    <string name="a1">E, F, G, K, I, J, H</string>
+    <string name="b1">E, H, F, G, I, J, K</string>
+    <string name="c1">E, K, G, F, J, H, I</string>
+    <string name="d1">G, E, F, I, H, K, J</string>
+    <string name="e1">G, E, H, K, F, I, J</string>
+    <string name="certa1">E, H, F, G, I, J, K</string>
+
+    <string name="titulo2">Dona Minhoca</string>
+    <string name="enum2">Dona Minhoca construiu quatro túneis -- Q, R, S e T -- embaixo da terra, ligando os quadro cômodos -- A, B, C e D -- da sua residência.
+        Cada tunel tem exatamente o mesmo comprimento e conecta exatamente dois cômodos diferentes, da seguinte forma:
+    \n\n
+    • Q conecta A e C\n
+    • R conecta B e C\n
+    • S conecta A e B\n
+    • T conecta B e D\n
+    \n\n
+        Qual das seguintes alternativas é uma ordem correta de cômodos num passeio em que Dona Minhoca visita todos os cômodos de sua residência, partindo do cômodo
+        A, usando apenas os túneis e nunca usando um túnel mais de uma vez?
+    </string>
+    <string name="a2"> A, B, C, D</string>
+    <string name="b2"> A, C, B, D</string>
+    <string name="c2"> A, C, D, B</string>
+    <string name="d2"> A, D, B, C</string>
+    <string name="e2"> A, D, C, B</string>
+    <string name="certa2">A, D, C, B</string>
+
+    <string name="titulo3">Flores</string>
+    <string name="enum3">Uma floricultura está vendendo arranjos de rosas para o dia das Mães. Há cinco arranjos, um de cada uma das seguintes cores:
+        laranja, rosa, vermelha, branca e amarela. Os arranjos são vendidos um por vez, de acordo com as seguintes restrições:
+        \n\n
+        • O arranjo rosa é o primeiro, o terceiro ou o quinto a ser vendido.\n
+        • Pelo menos dois arranjos são vendidos após arranjo branco ser vendido.\n
+        • O arranjo amarelo é vendido após o arranjo laranja, com exatamente um arranjo sendo vendido entre o laranja e o amarelo.\n
+
+        Qual das seguintes alternativas é uma ordem correta em que os arranjos foram vendidos, do primeiro ao último?
+        \n
+    </string>
+    <string name="a3">rosa, amarela, laranja, vermelha, branca</string>
+    <string name="b3">rosa, amarela, laranja, vermelha, branca</string>
+    <string name="c3">branca, rosa, amarela, laranja, vermelha</string>
+    <string name="d3">vermelha, laranja, branca, amarela, rosa</string>
+    <string name="e3">rosa, laranja, vermelha, amarela, branca</string>
+    <string name="certa3">rosa, laranja, vermelha, amarela, branca</string>
+
+    <string name="titulo4">Questão para deixar de estudar hihi</string>
+    <string name="enum4">Cinco estudantes -- Ana, Bia, Carla, Diego e Eva -- estão
+        jantando numa mesa redonda de exatamente cinco lugares. As seguintes restrições
+        são obedecidas quanto aos lugares que ocupam na mesa:
+        \n\n
+        • Há exatamente um estudante entre Ana e Eva.\n
+        • Bia senta-se ao lado de Diego.\n
+         Diego não se senta ao lado de Eva.\n
+        \n\n
+        Qual das seguintes alternativas é uma ordem correta em que os estudantes podem sentar-se à mesa?
+        \n
+    </string>
+    <string name="a4">  Ana, Bia, Diego, Carla, Eva</string>
+    <string name="b4"> Ana, Diego, Bia, Eva, Carla </string>
+    <string name="c4">  Ana, Diego, Carla, Eva, Bia</string>
+    <string name="d4"> Ana, Carla, Eva, Diego, Bia</string>
+    <string name="e4">  Ana, Bia, Carla, Diego, Eva</string>
+    <string name="certa4"> Ana, Carla, Eva, Diego, Bia</string>
+
+</resources>
