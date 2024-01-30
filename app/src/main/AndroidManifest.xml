@@ -13,8 +13,21 @@
         android:theme="@style/Theme.QuestoesFiBee"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".SplashScreenActivity"
             android:exported="true" >
+=======
+            android:name=".ResultsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="MenuActivity"
+            android:theme="@style/Theme.QuestoesFiBee" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+>>>>>>> 3251c8e (Push 1)
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,8 +36,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
+<<<<<<< HEAD
             android:exported="true">
         </activity>
+=======
+            android:exported="true" />
+>>>>>>> 3251c8e (Push 1)
     </application>
 
 </manifest>

@@ -2,6 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<<<<<<< HEAD
     <color name="simplebackgroundcolor">#ffc501</color>
+=======
+    <color name="grey">#454545</color>
+    <color name="splashScreenColor">#ffc501</color>
+    <color name="menuBackgroundColor">#fee797</color>
+>>>>>>> 3251c8e (Push 1)
 
 </resources>

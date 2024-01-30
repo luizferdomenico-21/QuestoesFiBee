@@ -4,20 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/simplebackgroundcolor"
+=======
+    android:background="@color/splashScreenColor"
+>>>>>>> 3251c8e (Push 1)
     tools:context=".SplashScreenActivity">
 
     <ImageView
         android:id="@+id/imageView5"
+<<<<<<< HEAD
         android:layout_width="333dp"
         android:layout_height="309dp"
+=======
+        android:layout_width="272dp"
+        android:layout_height="241dp"
+>>>>>>> 3251c8e (Push 1)
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD
         android:layout_marginStart="35dp"
         android:layout_marginTop="206dp"
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="216dp"
         app:srcCompat="@mipmap/fibee_splash_logo_foreground" />
+=======
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="247dp"
+        app:srcCompat="@mipmap/fibee_splash_logo_foreground" />
+
+
+>>>>>>> 3251c8e (Push 1)
 </RelativeLayout>
