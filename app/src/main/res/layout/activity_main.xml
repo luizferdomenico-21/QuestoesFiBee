@@ -9,11 +9,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="587dp"
-=======
-        android:layout_height="700dp"
->>>>>>> 3251c8e (Push 1)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -47,10 +43,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup"
-<<<<<<< HEAD
-=======
                 android:onClick="radioGroup"
->>>>>>> 3251c8e (Push 1)
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp">
@@ -96,32 +89,6 @@
     </ScrollView>
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/responder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="responder"
-        android:text="Responder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.197" />
-=======
-        android:id="@+id/teste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pontuacao"
-        android:text="Desempenho"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/proximo"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/anterior"
-        app:layout_constraintTop_toBottomOf="@+id/responder"
-        app:layout_constraintVertical_bias="0.928" />
-
-    <Button
         android:id="@+id/responder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -131,7 +98,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:rippleColor="#FFEB3B"
         tools:layout_editor_absoluteX="0dp" />
->>>>>>> 3251c8e (Push 1)
 
     <Button
         android:id="@+id/proximo"
@@ -144,11 +110,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/responder"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="0.448" />
-=======
         app:layout_constraintVertical_bias="0.928" />
->>>>>>> 3251c8e (Push 1)
 
     <Button
         android:id="@+id/anterior"
@@ -161,7 +123,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/responder"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.448" />
 
     <Button
@@ -175,10 +136,7 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/anterior"
         app:layout_constraintTop_toBottomOf="@+id/responder"
-        app:layout_constraintVertical_bias="0.448" />
-=======
         app:layout_constraintVertical_bias="0.928" />
->>>>>>> 3251c8e (Push 1)
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
