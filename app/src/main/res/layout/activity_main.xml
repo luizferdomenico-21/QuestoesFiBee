@@ -10,9 +10,9 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="587dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/responder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -43,28 +43,16 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup"
-                android:onClick="radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:onClick="radioGroup">
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/e1" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/d1" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/c1" />
+                    android:text="@string/a1" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
@@ -73,11 +61,25 @@
                     android:text="@string/b1" />
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/a1" />
+                    android:text="@string/c1" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/d1" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/e1" />
+
             </RadioGroup>
+
             <TextView
                 android:id="@+id/line"
                 android:layout_width="match_parent"
