@@ -60,15 +60,12 @@ class MainActivity : AppCompatActivity() {
             val selectedId: Int = radioGroup.checkedRadioButtonId
             val selectedRadioButton = findViewById<RadioButton>(selectedId)
 
-            Toast.makeText(applicationContext, idquestao.toString(), Toast.LENGTH_SHORT).show()
-
-            // PROBLEMA
             if(selectedRadioButton.getText().toString() == getString(
                     this.resources.getIdentifier("certa$idquestao", "string", this.packageName))){
-                Toast.makeText(applicationContext, "Acertou!!!!!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Correto", Toast.LENGTH_SHORT).show()
                 selectedRadioButton.setTextColor(Color.GREEN)
                 acertos += 1
-            //--------
+
             } else {
                 if (rb1.text !== getString(
                         this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
@@ -107,8 +104,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 erros += 1
             }
-            btResponder.isClickable = false
-            btResponder.setBackgroundColor(Color.GRAY)
+            listQuestions.addAll(listOf(idquestao, rb1.currentTextColor,rb2.currentTextColor,
+                rb3.currentTextColor,rb4.currentTextColor,rb5.currentTextColor,))
+            radioGroup.isClickable = false
         }
 
     }
@@ -127,54 +125,22 @@ class MainActivity : AppCompatActivity() {
             btResponder.isClickable = false
             btResponder.setBackgroundColor(Color.GRAY)
 
-            if (rb1.text !== getString(
-                    this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
-                    rb1.setTextColor(grayButton)
-                    rb1.isClickable = false
-                } else {
-                    rb1.setTextColor(greenButton)
-                }
-                if (rb2.text !== getString(
-                        this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
-                    rb2.setTextColor(grayButton)
-                    rb2.isClickable = false
-                } else {
-                    rb2.setTextColor(greenButton)
-                }
-                if (rb3.text !== getString(
-                        this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
-                    rb3.setTextColor(grayButton)
-                    rb3.isClickable = false
-                } else {
-                    rb3.setTextColor(greenButton)
-                }
-                if (rb4.text !== getString(
-                        this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
-                    rb4.setTextColor(grayButton)
-                    rb4.isClickable = false
-                } else {
-                    rb4.setTextColor(greenButton)
-                }
-                if (rb5.text !== getString(
-                        this.resources.getIdentifier("certa$idquestao", "string", this.packageName))) {
-                    rb5.setTextColor(grayButton)
-                    rb5.isClickable = false
-                } else {
-                    rb5.setTextColor(greenButton)
-                }
+            val indexIdquestao = listQuestions.indexOf(idquestao + 1)
+            radioBtnColors = listQuestions.slice(indexIdquestao..indexIdquestao + 5).toMutableList()
+
+            rb1.setTextColor(radioBtnColors.get(1))
+            rb2.setTextColor(radioBtnColors.get(2))
+            rb3.setTextColor(radioBtnColors.get(3))
+            rb4.setTextColor(radioBtnColors.get(4))
+            rb5.setTextColor(radioBtnColors.get(5))
+
                 acertos++
                 acertosDouble = acertos.toDouble()
                 finalScore = acertosDouble / numberOfQuestions * 100
 
             erros += 1
 
-            listQuestions.addAll(listOf(idquestao, rb1.currentTextColor,rb2.currentTextColor,
-                rb3.currentTextColor,rb4.currentTextColor,rb5.currentTextColor,))
-            val indexIdquestao = listQuestions.indexOf(idquestao)
-            radioBtnColors = listQuestions.slice(indexIdquestao..indexIdquestao + 5).toMutableList()
-
-            listRadioBtns.addAll(radioBtnColors)
-
+            // CODIGO COMENTADO POIS  NÃO É PRIORIDADE NO MOMENTO
             //if (answerQuestions == numberOfQuestions && idquestao == listController.last()) {
             //val answerButton = findViewById<Button>(R.id.proximo)
             //answerButton.setOnClickListener {
@@ -188,18 +154,6 @@ class MainActivity : AppCompatActivity() {
                 //    }
             //}
 
-        val btAnterior = findViewById<Button>(R.id.anterior)
-        btAnterior.isClickable = true
-        btAnterior.setBackgroundColor(Color.rgb(103, 79, 163))
-
-            val idquestaoIndex = listRadioBtns.indexOf(idquestao + 1)
-            val listBtnColors = listRadioBtns.slice(idquestaoIndex..idquestaoIndex+5)
-
-            rb1.setTextColor(listBtnColors.get(1))
-            rb2.setTextColor(listBtnColors.get(2))
-            rb3.setTextColor(listBtnColors.get(3))
-            rb4.setTextColor(listBtnColors.get(4))
-            rb5.setTextColor(listBtnColors.get(5))
 
         } else {
             val btResponder = findViewById<Button>(R.id.responder)
@@ -214,18 +168,6 @@ class MainActivity : AppCompatActivity() {
             radioGroup.clearCheck()
         }
 
-        rb1.isClickable = true
-        rb2.isClickable = true
-        rb3.isClickable = true
-        rb4.isClickable = true
-        rb5.isClickable = true
-
-        radioGroup.clearCheck()
-
-        val btResponder = findViewById<Button>(R.id.responder)
-        btResponder.isClickable = true
-        btResponder.setBackgroundColor(Color.rgb(103, 79, 163))
-
         if (idquestao < getString(R.integer.quantidade).toInt()){
 
             idquestao += 1
@@ -237,23 +179,17 @@ class MainActivity : AppCompatActivity() {
             titulo.text = getString(this.resources.getIdentifier("titulo$idquestao", "string", this.packageName))
 
             rb1.text = getString(this.resources.getIdentifier("a$idquestao", "string", this.packageName))
-            rb1.setTextColor(Color.BLACK)
             rb2.text = getString(this.resources.getIdentifier("b$idquestao", "string", this.packageName))
-            rb2.setTextColor(Color.BLACK)
             rb3.text = getString(this.resources.getIdentifier("c$idquestao", "string", this.packageName))
-            rb3.setTextColor(Color.BLACK)
             rb4.text = getString(this.resources.getIdentifier("d$idquestao", "string", this.packageName))
-            rb4.setTextColor(Color.BLACK)
             rb5.text = getString(this.resources.getIdentifier("e$idquestao", "string", this.packageName))
-            rb5.setTextColor(Color.BLACK)
 
         }else{
-
+            rb1.text = getString(this.resources.getIdentifier("a$idquestao", "string", this.packageName))
             rb2.text = getString(this.resources.getIdentifier("b$idquestao", "string", this.packageName))
             rb3.text = getString(this.resources.getIdentifier("c$idquestao", "string", this.packageName))
             rb4.text = getString(this.resources.getIdentifier("d$idquestao", "string", this.packageName))
             rb5.text = getString(this.resources.getIdentifier("e$idquestao", "string", this.packageName))
-
         }
     }
 
@@ -273,14 +209,10 @@ class MainActivity : AppCompatActivity() {
             btResponder.isClickable = false
             btResponder.setBackgroundColor(Color.GRAY)
 
-            val idquestaoIndex = listRadioBtns.indexOf(idquestao - 1)
-            val listBtnColors = listRadioBtns.slice(idquestaoIndex..idquestaoIndex+5)
+            val indexIdquestao = listQuestions.indexOf(idquestao - 1)
+            radioBtnColors = listQuestions.slice(indexIdquestao..indexIdquestao + 5).toMutableList()
 
-            rb1.setTextColor(listBtnColors.get(1))
-            rb2.setTextColor(listBtnColors.get(2))
-            rb3.setTextColor(listBtnColors.get(3))
-            rb4.setTextColor(listBtnColors.get(4))
-            rb5.setTextColor(listBtnColors.get(5))
+
         } else {
             val btResponder = findViewById<Button>(R.id.responder)
             btResponder.isClickable = true
@@ -293,12 +225,6 @@ class MainActivity : AppCompatActivity() {
             rb5.setTextColor(Color.BLACK)
             radioGroup.clearCheck()
         }
-
-        //if (idquestao == 2) {
-        //    val btAnterior = findViewById<Button>(R.id.anterior)
-        //   btAnterior.isClickable = false
-        //    btAnterior.setBackgroundColor(Color.GRAY)
-        //}
 
         if (idquestao > 1){
             idquestao -= 1
@@ -322,7 +248,6 @@ class MainActivity : AppCompatActivity() {
             rb3.text = getString(this.resources.getIdentifier("c$idquestao", "string", this.packageName))
             rb4.text = getString(this.resources.getIdentifier("d$idquestao", "string", this.packageName))
             rb5.text = getString(this.resources.getIdentifier("e$idquestao", "string", this.packageName))
-        } else {
         }
 
     }
